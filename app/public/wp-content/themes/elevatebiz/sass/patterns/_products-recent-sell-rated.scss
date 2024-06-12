@@ -1,0 +1,82 @@
+/* --- Products Recent
+-------------------------------------------------------- */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product,
+.wc-block-grid__product.wc-block-grid__product {
+    text-align: left;
+}
+
+.woocommerce .products .star-rating,
+.wc-block-grid__product-rating,
+.wc-block-grid__product-rating .star-rating,
+.wc-block-components-product-rating__stars,
+.wc-block-grid__product-rating .wc-block-grid__product-rating__stars {
+    text-align: left;
+}
+
+.wp-block-products .wc-block-grid__product.wc-block-grid__product {
+    margin-bottom: 0;
+}
+
+.wp-block-products .wc-block-grid__product.wc-block-grid__product > *:not(.wc-block-grid__product-onsale) {
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.wc-block-grid__product .wc-block-grid__product-image,
+.wc-block-grid__product .wc-block-grid__product-link {
+    display: inline-block;
+    position: relative;
+}
+
+.wp-block-products .wc-block-grid__product.wc-block-grid__product .wc-block-grid__product-link {
+    color: var(--wp--preset--color--foreground);
+}
+
+.wp-block-products .wc-block-grid__product .wc-block-grid__product-title:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+.wp-block-products .wc-block-grid__product .wc-block-grid__product-title {
+    margin: 0;
+    padding: 28px 0 0.5em 0;
+    font-family: var(--wp--preset--font-family--playfair-display);
+    font-size: var(--wp--preset--font-size--content-heading) !important;
+}
+
+.wp-block-products .wc-block-grid__product .wc-block-grid__product-price {
+    padding: 0 0 14px 0;
+}
+
+.wp-block-products .wp-block-button.wc-block-components-product-button,
+.wp-block-products .wp-block-button.wc-block-grid__product-add-to-cart {
+    padding: 0 0 clamp(28px, 3.5vw, 49px) 0;
+}
+
+.wp-block-products .wc-block-grid__product .wc-block-grid__product-image:not(.wc-block-components-product-image) {
+    margin-bottom: 0;
+}
+
+.wp-block-products .wc-block-grid__product .wc-block-grid__product-rating {
+    padding-bottom: 14px;
+}
+
+  @media (min-width: 481px) and (max-width: 600px) {
+        .wc-block-grid.has-4-columns .wc-block-grid__product:nth-child(2n+1) {
+            padding-right: 0;
+        }
+
+        .wc-block-grid.has-4-columns .wc-block-grid__product:nth-child(2n) {
+            padding-left: 0;
+        }
+    }
+
+/* --- Products On Sell
+-------------------------------------------------------- */
+
+
+
+/* --- Products On Top Rated
+-------------------------------------------------------- */

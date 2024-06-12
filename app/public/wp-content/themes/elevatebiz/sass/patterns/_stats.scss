@@ -1,0 +1,20 @@
+/* --- Block Stats
+-------------------------------------------------------- */
+.wp-block-stats .wp-block-image img {
+    mix-blend-mode: difference;
+}
+
+
+.wp-block-stats-default {
+    .stat-block {
+        box-shadow: 5px 8.7px 15px 0 rgba(0, 0, 0, 0.1);
+        padding: clamp(28px, 3.5vw, 49px) clamp(28px, 3.5vw, 42px);
+        background-color: var(--wp--preset--color--background);
+    }
+}
+
+ .wp-block-section:nth-child(2n+1) .wp-block-stats-default {
+    .stat-block {
+         background-color: var(--wp--preset--color--secondary);
+     }
+ }

@@ -1,0 +1,51 @@
+/* --- Block Pricing
+-------------------------------------------------------- */
+
+.wp-block-pricing {
+    ul {
+        li {
+            line-height: 1.6em;
+            padding: 8px 16px;
+            list-style: none;
+            text-align: center;
+            + li {
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    border-top: 1px solid var(--wp--preset--color--background);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+    .wp-block-button__link.wp-element-button {
+        margin-top: 0;
+        &:hover {
+            color: var(--wp--preset--color--background) !important;
+        }
+    }
+
+    .wp-block-button__link:hover {
+        background-color: var(--wp--preset--color--foreground) !important;
+    }
+
+    .popular-plan {
+        position: relative;
+        .popular {
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+    }
+}
+
+

@@ -1,0 +1,354 @@
+/* --- Block featured Content
+-------------------------------------------------------- */
+.wp-block-feature-content .wp-block-image,
+.wp-block-team .wp-block-image {
+    overflow: hidden;
+}
+
+.wp-block-feature-content .wp-block-image img,
+.wp-block-team .wp-block-image img {
+    transition: all 0.5s ease-in-out;
+}
+
+.wp-block-feature-content .wp-block-post-group:hover .wp-block-image img {
+    opacity: 0.6;
+}
+
+.wp-block-feature-content .wp-block-post-group:hover .wp-block-image img,
+.wp-block-team .wp-block-post-group:hover .wp-block-image img {
+    transform: scale(1.1);
+}
+
+.wp-block-feature-content-default {
+    .wp-block-entry-content {
+        padding: clamp(30px, 3.5vw, 50px);
+        background-color: var(--wp--preset--color--secondary);
+    }
+}
+
+.wp-block-section:nth-child(2n+1).wp-block-feature-content-default {
+    .wp-block-entry-content {
+        background-color: var(--wp--preset--color--background);
+    }
+}
+
+/* --- Block Services
+-------------------------------------------------------- */
+
+.wp-block-feature-content .wp-block-group-content .wp-block-post-group,
+.wp-block-services .wp-block-group-content .wp-block-post-group {
+    border: 2px solid var(--wp--preset--color--border-color);
+    padding: var(--wp--custom--spacing--testimonial-inner-gap);
+}
+
+.wp-block-feature-content .wp-block-entry-content h2,
+.wp-block-services .wp-block-entry-content h2 {
+    margin-top: var(--wp--custom--spacing--extra-small);
+}
+
+.wp-block-button.is-style-outline.is-style-only-line .wp-block-button__link {
+    border: 0;
+    position: relative;
+    border-radius: 0;
+    padding: 0;
+    font-size: var(--wp--preset--font-size--medium);
+    font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+}
+
+.wp-block-button.is-style-outline.is-style-only-line .wp-block-button__link:after {
+    content: "";
+    border-bottom: 2px solid var(--wp--preset--color--primary);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -7px;
+    transition: all .5s ease;
+}
+
+.wp-block-button.is-style-outline.is-style-only-line .wp-block-button__link:hover::after {
+    width: 30%;
+}
+
+.is-style-outline.is-style-only-line>.wp-block-button__link:not(.has-background):hover,
+.wp-block-button__link.is-style-outline.is-style-only-line:not(.has-background):hover {
+    color: var(--wp--preset--color--primary) !important;
+    background: transparent !important;
+}
+
+.wp-block-services .wp-block-image img {
+    mix-blend-mode: difference;
+}
+
+.wp-block-services-default {
+    .wp-block-post-group {
+        box-shadow: 5px 8.7px 15px 0 rgba(0, 0, 0, 0.1);
+        padding: clamp(30px, 3.5vw, 50px);
+        background-color: var(--wp--preset--color--secondary);
+    }
+}
+
+.wp-block-section:nth-child(2n+1).wp-block-services-default {
+    .wp-block-post-group {
+        background-color: var(--wp--preset--color--background);
+    }
+}
+
+.wp-block-services-default,
+.wp-block-stats-default {
+
+    .wp-block-post-group,
+    .stat-block {
+        &:hover {
+            .wp-block-image {
+                img {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+
+        .wp-block-image {
+            img {
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+
+/* --- Block Hero Content
+-------------------------------------------------------- */
+
+.wp-block-hero-content.wp-block-section .wp-block-group-heading {
+    margin-bottom: 28px;
+}
+
+//Hero With Accordion
+
+.wp-block-fse-pro-accordion {
+
+    padding: 21px 0;
+
+    .accordion-controls .title-wrap,
+    .accordion-controls .toggle-content {
+        background-color: transparent;
+    }
+
+    .accordion-title {
+        color: var(--wp--preset--color--body-text);
+        margin-top: 0;
+        font-size: var(--wp--preset--font-size--normal);
+
+    }
+
+    .accordion-controls.active {
+        border: none;
+    }
+
+    .accordion-controls .title-wrap {
+        padding: 0;
+    }
+
+    .toggle-content {
+        margin-top: 14px;
+    }
+
+    .accordion-controls .toggle-btn {
+        opacity: 1;
+    }
+
+    .accordion-controls .toggle-btn {
+        background-color: transparent;
+        color: var(--wp--preset--color--color-dark);
+    }
+
+    .active {
+        .fse-pro-accordion-icon-hide {
+            display: none;
+        }
+
+        .fse-pro-accordion-icon-show {
+            display: block;
+        }
+    }
+
+
+}
+
+.wp-block-fse-pro-accordion+.wp-block-fse-pro-accordion {
+    border-top: 1px solid var(--wp--preset--color--border-color);
+}
+
+
+
+/* --- Block Team
+-------------------------------------------------------- */
+
+.wp-block-team .wp-block-post-group {
+    position: relative;
+    overflow: hidden;
+}
+
+.wp-block-team .wp-block-entry-content {
+    position: absolute;
+    bottom: 0;
+    padding: clamp(28px, 3.5vw, 42px);
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.wp-block-team .wp-block-post-group:hover::before {
+    opacity: 1;
+}
+
+.wp-block-team .wp-block-post-group::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(34, 146, 177, 0), rgba(34, 146, 177, 0.2));
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.wp-block-team .wp-block-entry-content>*:not(.wp-block-buttons) {
+    transform: translateY(48px);
+    transition: all 0.5s ease-in-out;
+}
+
+.wp-block-team .wp-block-post-group:hover .wp-block-entry-content>*:not(.wp-block-buttons) {
+    transform: translateY(0px);
+    animation: smoothScrollBack 0s backwards, fadein 1s;
+}
+
+.wp-block-team .wp-block-entry-content>.wp-block-buttons {
+    transform: translateY(120px);
+    transition: 0.5s;
+}
+
+.wp-block-team .wp-block-post-group:hover .wp-block-entry-content>.wp-block-buttons {
+    animation: fadein 1s;
+    transform: translateY(0px);
+}
+
+
+.wp-block-team-default {
+    .wp-block-entry-content {
+        box-shadow: 5px 8.7px 15px 0 rgba(0, 0, 0, 0.1);
+        padding: clamp(30px, 3.5vw, 50px);
+        background-color: var(--wp--preset--color--secondary);
+    }
+
+    .wp-block-separator {
+        border-width: 1px !important;
+        height: 1px !important;
+        width: 42px !important;
+    }
+}
+
+.wp-block-section:nth-child(2n+1).wp-block-team-default {
+    .wp-block-entry-content {
+        background-color: var(--wp--preset--color--background);
+    }
+}
+
+.wp-block-team-default {
+    .wp-block-post-group {
+        overflow: hidden;
+
+        &:hover {
+            .wp-block-image {
+                img {
+                    transform: scale(1.1);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .wp-block-image {
+            img {
+                transition: 1s ease;
+            }
+        }
+    }
+}
+
+
+/* --- Block Case Studies
+-------------------------------------------------------- */
+
+.wp-block-clients-case-studies {
+    .swiper-pagination-bullet {
+        background-color: var(--wp--preset--color--tertiary);
+    }
+
+    .swiper-slide {
+
+        .animate-div {
+            display: none;
+
+            h6 {
+                animation: drop-in 800ms ease 100ms backwards;
+            }
+
+            p {
+                animation: drop-in 600ms ease 300ms backwards;
+            }
+        }
+
+        &:hover {
+            .animate-div {
+                display: block;
+            }
+        }
+
+        .wp-block-cover__background {
+            transition: opacity 0.3s;
+        }
+
+        .wp-block-cover__image-background {
+            transition: .5s ease;
+
+        }
+
+        &:hover {
+            .wp-block-cover__background {
+                opacity: .5;
+            }
+
+            .wp-block-cover__image-background {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .swiper-slide-next {
+        .animate-div {
+            display: block;
+        }
+
+        .wp-block-cover__image-background {
+            transition: 1s ease;
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}

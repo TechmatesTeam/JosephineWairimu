@@ -1,0 +1,125 @@
+/* --- Block Contact
+-------------------------------------------------------- */
+
+/* --- Block Quick Contact
+-------------------------------------------------------- */
+
+.wp-block-section.wp-block-contact {
+    padding-top: 0;
+}
+
+.wp-block-section.wp-block-quick-contact .wp-block-group-heading {
+    margin-bottom: 0;
+}
+
+.wp-block-section.wp-block-quick-contact.wp-block-cover {
+    min-height: auto;
+}
+
+@media screen and (max-width: 48.8125em) {
+    .wp-block-quick-contact .wp-block-column .wp-block-buttons {
+        justify-content: flex-start;
+    }
+}
+
+
+/* --- Contact
+-------------------------------------------------------- */
+/* --- Block Quick Contact
+-------------------------------------------------------- */
+
+.wp-block-contact.wp-block-section .wp-block-group-heading {
+    text-align: left;
+}
+
+.wp-block-contact .contact-information a {
+    text-decoration: none;
+}
+
+.wp-block-contact .elevatebiz-pro-icons svg {
+    color: var(--wp--preset--color--primary);
+    fill: var(--wp--preset--color--primary);
+}
+
+
+.wp-block-contact .contact-form .wpcf7-form textarea {
+    height: 100px;
+}
+
+.wp-block-contact .contact-form .wpcf7-form > p:nth-of-type(1),
+.wp-block-contact .contact-form .wpcf7-form > p:nth-of-type(2) {
+    margin-top: 0;
+}
+
+.wp-block-contact .screen-reader-response ul,
+.wp-block-contact.wp-block-section .wp-block-group-heading {
+    margin: 0;
+}
+
+
+.wp-block-section.wp-block-contact {
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"],
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+        &:not([type="submit"]) {
+            font-size: var(--wp--preset--font-size--upper-heading);
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid var(--wp--preset--color--border-color);
+            padding-left: 0;
+            color: var(--wp--preset--color--body-text);
+        }
+        &:focus {
+        border-bottom-color: var(--wp--preset--color--primary);
+        }
+    }
+}
+
+
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+// Font Family For Placeholder Input
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: var(--wp--preset--font-family--open-sans);
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: var(--wp--preset--font-family--open-sans);
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: var(--wp--preset--font-family--open-sans);
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: var(--wp--preset--font-family--open-sans);
+}
+
+/* Hide Arrows From Number Input */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+

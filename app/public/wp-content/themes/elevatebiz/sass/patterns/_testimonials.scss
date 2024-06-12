@@ -1,0 +1,54 @@
+/* --- Block Testimonials
+-------------------------------------------------------- */
+
+.wp-block-clients-testimonial,
+.wp-block-clients-testimonial-default {
+    .wp-block-group-content {
+        position: relative;
+        &:before {
+            color: var(--wp--preset--color--primary);
+            font-family: "georgia";
+            content: "\201C";
+            display: block;
+            float: left;
+            font-size: 91px;
+            font-style: normal;
+            font-weight: 500;
+            height: 0;
+            line-height: 1;
+            position: absolute;
+            right: auto;
+            left: 50%;
+            top: -8px;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+.wp-block-clients-testimonial-default {
+    .wp-block-group-content {
+        position: relative;
+
+        &:before {
+            font-family: "arial";
+            font-size: 150px;
+            left: var(--wp--preset--spacing--40);
+            top: 28px;
+            transform: none;
+        }
+    }
+}
+
+.wp-block-clients-testimonial-default {
+    .wp-block-group-content {
+        background-color: var(--wp--preset--color--secondary);
+        box-shadow: 5px 8.7px 15px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.wp-block-section:nth-child(2n+1).wp-block-clients-testimonial-default {
+    .wp-block-group-content {
+        background-color: var(--wp--preset--color--background);
+    }
+}

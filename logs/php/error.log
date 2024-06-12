@@ -1,0 +1,29 @@
+[17-May-2024 14:21:28 UTC] PHP Warning:  Undefined property: WP_Ajax_Upgrader_Skin::$api in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-admin\includes\class-theme-upgrader.php on line 160
+[17-May-2024 14:43:17 UTC] WordPress database error Incorrect DATETIME value: '' for query SELECT 
+	DISTINCT p.ID, p.post_content, p.post_type, p.post_status
+FROM wp_posts as p
+	LEFT JOIN wp_aioseo_blc_posts as abp ON p.ID = abp.post_id
+WHERE 1 = 1 AND
+	p.post_status IN('publish','future','draft','pending','private')
+	AND p.post_type IN('post','page')
+	AND (
+				abp.post_id IS NULL OR
+				abp.link_scan_date < p.post_modified_gmt OR
+				abp.link_scan_date IS NULL OR
+				abp.link_scan_date < ''
+			)
+LIMIT 50
+/* 1 = 1 */ made by do_action('wp_ajax_as_async_request_queue_runner'), WP_Hook->do_action, WP_Hook->apply_filters, WP_Async_Request->maybe_handle, ActionScheduler_AsyncRequest_QueueRunner->handle, do_action('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_Abstract_QueueRunner->process_action, ActionScheduler_Action->execute, do_action_ref_array('aioseo_blc_links_scan'), WP_Hook->do_action, WP_Hook->apply_filters, AIOSEO\BrokenLinkChecker\Links\Links->scanPosts, AIOSEO\BrokenLinkChecker\Links\Data->getPostsToScan, AIOSEO\BrokenLinkChecker\Core\Database->run
+[20-May-2024 07:37:28 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[20-May-2024 08:03:43 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[22-May-2024 08:25:52 UTC] PHP Warning:  Undefined property: stdClass::$title in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-content\plugins\lead-form-builder\block\app.php on line 23
+[22-May-2024 08:25:52 UTC] PHP Warning:  Undefined property: stdClass::$title in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-content\plugins\lead-form-builder\block\app.php on line 23
+[22-May-2024 09:31:30 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[22-May-2024 11:05:06 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 05:50:46 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 06:04:47 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 06:14:33 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 07:27:14 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 07:27:23 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[23-May-2024 07:31:44 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\ADMIN\Local Sites\josephines\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[24-May-2024 07:04:57 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
